@@ -1,0 +1,13 @@
+services:
+
+  termix:
+    image: ghcr.io/lukegus/termix:latest
+    container_name: termix
+    restart: unless-stopped
+    ports:
+      - "8230:8080"
+    volumes:
+      - ./termix-db:/data/db
+    environment:     
+      SALT: "Ie4AQkGeUruIxmBH4qqurFeW13m49TIZ"
+      PORT: "8080" 
